@@ -8,6 +8,7 @@ pub fn main() !void {
 	var fba = std.heap.FixedBufferAllocator.init(&buffer);
 	const allocator = fba.allocator();
 
+
 	const text = try file.readToEndAlloc(allocator, maxSize);
 	_ = text;
 	var utf8 = (try std.unicode.Utf8View.init("hello there")).iterator();
