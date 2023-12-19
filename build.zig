@@ -6,7 +6,7 @@ pub fn build(b: *Builder) void {
 
     const exe = b.addExecutable(.{
         .name = "day1",
-        .root_source_file = .{ .path = "day1.zig" },
+        .root_source_file = .{ .path = "src/day1.zig" },
         .target = target,
         .optimize = optimize,
     });
