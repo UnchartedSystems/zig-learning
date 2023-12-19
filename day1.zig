@@ -12,6 +12,6 @@ pub fn main() !void {
 	_ = text;
 	var utf8 = (try std.unicode.Utf8View.init("hello there")).iterator();
 	while (utf8.nextCodepointSlice()) |codepoint| {
-		std.debug.print("got codepoint {}\n", .{codepoint});
+		std.debug.print("got codepoint {s}\n", .{codepoint});
 	}
 }
